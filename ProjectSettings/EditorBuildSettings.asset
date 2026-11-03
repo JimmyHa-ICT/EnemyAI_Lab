@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HUSTEnemyAILab/Scenes/01_Prototype.unity
     guid: 06e15355316266041992e6257697dfbe
+  - enabled: 1
+    path: Assets/HUSTEnemyAILab/Scenes/02_EnumFSM.unity
+    guid: 731e1bf18a3f1344386107b68cecc935
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

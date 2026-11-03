@@ -32,3 +32,27 @@ The scene and prototype prefab can be regenerated from the Unity menu:
 `HUST Enemy AI Lab > Build Milestone 2 Prototype`
 
 Running the Milestone 2 builder replaces only `01_Prototype`, its prototype Slime prefab, and its prototype visual assets. It does not rebuild `00_Foundation`.
+
+## 02_EnumFSM
+
+This scene shows the next step in the Slime's growth: one `FsmSlime` class with an explicit `EnemyState` enum.
+
+- **Patrol (white):** move between the two patrol points and reverse at each boundary.
+- **Chase (yellow):** enter when the Player is within detection range and move horizontally toward them.
+- **Attack (red):** enter within attack range, stop, wind up, apply one validated impact, then observe a cooldown.
+- Attack returns to Chase when the Player leaves attack range. Chase and Attack return to Patrol when the Player leaves detection range.
+- Leaving attack range during wind-up cancels the attack, so no stale target damage is applied.
+- Move with **A/D** or **Arrow Keys**, jump with **Space**, and press **R** to reset.
+
+Main files:
+
+- `Scripts/Runtime/Intermediate/FsmSlime.cs`
+- `Prefabs/Enemies/Intermediate/FsmSlime.prefab`
+- `Scenes/02_EnumFSM.unity`
+- `Tests/PlayMode/FsmSlimeTests.cs`
+
+The scene and FSM prefab can be generated from:
+
+`HUST Enemy AI Lab > Build Milestone 3 Enum FSM`
+
+The builder reuses the accepted Player, DemoArena, Slime sprite, and patrol marker assets. It creates only the separate Milestone 3 scene and FSM prefab, and appends the scene after 00 and 01 in Build Settings.
