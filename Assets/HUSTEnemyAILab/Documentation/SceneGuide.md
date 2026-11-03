@@ -56,3 +56,27 @@ The scene and FSM prefab can be generated from:
 `HUST Enemy AI Lab > Build Milestone 3 Enum FSM`
 
 The builder reuses the accepted Player, DemoArena, Slime sprite, and patrol marker assets. It creates only the separate Milestone 3 scene and FSM prefab, and appends the scene after 00 and 01 in Build Settings.
+
+## 03_ModularAI
+
+Scene 03 preserves the rules from Scene 02 but distributes them across focused components:
+
+- `EnemyBrain` owns `EnemyState`, evaluates every transition, and coordinates the other components. It neither queries physics nor applies damage.
+- `EnemySensor` exclusively performs Player-layer detection and exposes safe target and range information.
+- `EnemyMovement` owns patrol, chase velocity, stopping, direction, and sprite flipping.
+- `EnemyCombat` owns wind-up, impact, cooldown, cancellation, impact-time validation, and duplicate-impact prevention.
+- `EnemyHealth` owns runtime HP, one-time death, white hit feedback, and darkened death feedback.
+- `EnemyConfig` stores reusable tuning only; HP state, targets, and timers remain on instances.
+- `PlayerCombat` is intentionally minimal: press **F** near the Slime to deal one damage.
+
+`EnemyBrain` asks the sensor for facts, explicitly selects the next enum state, then coordinates movement or combat. Compared with `FsmSlime`, this makes physics queries, motion, attack timing, and health independently testable. The tradeoff is more components, references, setup work, and coordination rules.
+
+| Scene | Structure | Behaviors | Teaching focus |
+|---|---|---|---|
+| 01_Prototype | One patrol MonoBehaviour | Patrol | Smallest reasonable solution |
+| 02_EnumFSM | One enum-FSM MonoBehaviour | Patrol, Chase, Attack | Growing responsibilities |
+| 03_ModularAI | Brain plus focused components and config | Equivalent Patrol, Chase, Attack | Selective separation for maintenance and testing |
+
+Controls: **A/D** or arrows to move, **Space** to jump, **F** to attack, and **R** to reset. State colors are green, yellow, and red; hits flash white and death darkens the Slime.
+
+Generate the scene with `HUST Enemy AI Lab > Build Milestone 4 Modular AI`.

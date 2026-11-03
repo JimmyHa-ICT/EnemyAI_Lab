@@ -37,10 +37,17 @@ Milestone 3 adds an intermediate enum-based FSM implementation:
 - Attack wind-up, impact-time target/range validation, and cooldown
 - A separate scene and prefab that leave the prototype demonstration intact
 
+Milestone 4 preserves that behavior while separating production-oriented responsibilities:
+
+- `EnemyBrain` owns the enum state and all transitions.
+- `EnemySensor`, `EnemyMovement`, and `EnemyCombat` own queries, motion, and attack timing respectively.
+- `EnemyHealth` owns damage/death, while `EnemyConfig` stores shared tuning without runtime state.
+- A minimal **F** key player attack demonstrates hit feedback and enemy death.
+
 ## Open the demo
 
 1. Open the project in Unity `6000.3.17f1`.
-2. Open `00_Foundation`, `01_Prototype`, or `Assets/HUSTEnemyAILab/Scenes/02_EnumFSM.unity`.
+2. Open scenes `00_Foundation` through `03_ModularAI` under `Assets/HUSTEnemyAILab/Scenes`.
 3. Enter Play Mode.
 4. Use **A/D** or **Arrow Keys** to move and **Space** to jump.
 5. In either Enemy AI scene, press **R** to reset the demonstration.
