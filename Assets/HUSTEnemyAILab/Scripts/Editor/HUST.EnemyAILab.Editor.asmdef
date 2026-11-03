@@ -1,0 +1,13 @@
+{
+  "name": "HUST.EnemyAILab.Editor",
+  "rootNamespace": "HUST.EnemyAILab.Editor",
+  "references": [
+    "HUST.EnemyAILab.Runtime",
+    "Unity.InputSystem",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}

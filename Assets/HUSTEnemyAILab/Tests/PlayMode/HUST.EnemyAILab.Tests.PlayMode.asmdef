@@ -1,0 +1,11 @@
+{
+  "name": "HUST.EnemyAILab.Tests.PlayMode",
+  "rootNamespace": "HUST.EnemyAILab.Tests.PlayMode",
+  "references": [
+    "HUST.EnemyAILab.Runtime"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

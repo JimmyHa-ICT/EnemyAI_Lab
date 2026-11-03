@@ -1,0 +1,14 @@
+{
+  "name": "HUST.EnemyAILab.Tests.EditMode",
+  "rootNamespace": "HUST.EnemyAILab.Tests.EditMode",
+  "references": [
+    "HUST.EnemyAILab.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

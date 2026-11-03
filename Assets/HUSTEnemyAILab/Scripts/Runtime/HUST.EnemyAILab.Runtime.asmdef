@@ -1,0 +1,8 @@
+{
+  "name": "HUST.EnemyAILab.Runtime",
+  "rootNamespace": "HUST.EnemyAILab",
+  "references": [
+    "Unity.InputSystem"
+  ],
+  "autoReferenced": true
+}
