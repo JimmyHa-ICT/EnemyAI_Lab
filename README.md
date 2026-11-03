@@ -22,14 +22,21 @@ Milestone 1 provides the shared 2D platformer foundation:
 - Placeholder sprites and simple on-screen instructions
 - EditMode and PlayMode test assemblies
 
-Enemy AI is intentionally not implemented yet.
+Milestone 2 adds the first deliberately simple Enemy AI implementation:
+
+- One `PrototypeSlime` MonoBehaviour
+- Horizontal patrol between two visible points
+- Configurable patrol speed
+- Direction reversal and visual flipping
+- No State Machine or generic Enemy framework
 
 ## Open the demo
 
 1. Open the project in Unity `6000.3.17f1`.
-2. Open `Assets/HUSTEnemyAILab/Scenes/00_Foundation.unity`.
+2. Open either foundation scene or `Assets/HUSTEnemyAILab/Scenes/01_Prototype.unity`.
 3. Enter Play Mode.
 4. Use **A/D** or **Arrow Keys** to move and **Space** to jump.
+5. In the prototype scene, press **R** to reset the demonstration.
 
 See [SceneGuide](Assets/HUSTEnemyAILab/Documentation/SceneGuide.md) for scene details.
 
