@@ -177,6 +177,7 @@ MonoBehaviour:
   startMovingRight: 1
   playerTarget: {fileID: 0}
   detectionRange: 3
+  chaseVerticalTolerance: 0.25
   attackRange: 1.25
   chaseSpeed: 3
   attackWindUp: 0.5

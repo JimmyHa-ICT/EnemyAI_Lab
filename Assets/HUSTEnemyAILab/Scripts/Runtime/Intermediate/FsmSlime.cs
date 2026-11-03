@@ -18,6 +18,7 @@ namespace HUST.EnemyAILab.Intermediate
         [Header("Detection and Chase")]
         [SerializeField] private Transform playerTarget;
         [SerializeField, Min(0f)] private float detectionRange = 5f;
+        [SerializeField, Min(0f)] private float chaseVerticalTolerance = 1.25f;
         [SerializeField, Min(0f)] private float attackRange = 1.25f;
         [SerializeField, Min(0f)] private float chaseSpeed = 3f;
 
@@ -166,7 +167,8 @@ namespace HUST.EnemyAILab.Intermediate
         }
 
         private bool CanSeePlayer() => playerTarget != null &&
-            Vector2.Distance(transform.position, playerTarget.position) <= detectionRange;
+            Mathf.Abs(playerTarget.position.x - transform.position.x) <= detectionRange &&
+            Mathf.Abs(playerTarget.position.y - transform.position.y) <= chaseVerticalTolerance;
 
         private bool IsPlayerInAttackRange() => playerTarget != null &&
             Vector2.Distance(transform.position, playerTarget.position) <= attackRange;
@@ -210,9 +212,10 @@ namespace HUST.EnemyAILab.Intermediate
         }
 
         public void ConfigureTuning(float newDetectionRange, float newAttackRange,
-            float newWindUp, float newCooldown, int newDamage)
+            float newWindUp, float newCooldown, int newDamage, float newChaseVerticalTolerance = 1.25f)
         {
             detectionRange = Mathf.Max(0f, newDetectionRange);
+            chaseVerticalTolerance = Mathf.Max(0f, newChaseVerticalTolerance);
             attackRange = Mathf.Clamp(newAttackRange, 0f, detectionRange);
             attackWindUp = Mathf.Max(0f, newWindUp);
             attackCooldown = Mathf.Max(0f, newCooldown);
@@ -222,7 +225,8 @@ namespace HUST.EnemyAILab.Intermediate
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = new Color(1f, 0.85f, 0.1f);
-            Gizmos.DrawWireSphere(transform.position, detectionRange);
+            Gizmos.DrawWireCube(transform.position,
+                new Vector3(detectionRange * 2f, chaseVerticalTolerance * 2f, 0f));
             Gizmos.color = new Color(1f, 0.25f, 0.2f);
             Gizmos.DrawWireSphere(transform.position, attackRange);
             if (leftPatrolPoint == null || rightPatrolPoint == null) return;

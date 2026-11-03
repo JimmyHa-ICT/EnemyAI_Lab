@@ -12,7 +12,9 @@ namespace HUST.EnemyAILab.Production
         public void Scan()
         {
             if (config == null) { CurrentTarget = null; return; }
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, config.DetectionRange, playerLayer);
+            Vector2 detectionSize = new Vector2(config.DetectionRange * 2f,
+                config.ChaseVerticalTolerance * 2f);
+            Collider2D hit = Physics2D.OverlapBox(transform.position, detectionSize, 0f, playerLayer);
             CurrentTarget = hit != null ? hit.transform : null;
         }
 
@@ -25,7 +27,9 @@ namespace HUST.EnemyAILab.Production
         private void OnDrawGizmosSelected()
         {
             if (config == null) return;
-            Gizmos.color = Color.yellow; Gizmos.DrawWireSphere(transform.position, config.DetectionRange);
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireCube(transform.position,
+                new Vector3(config.DetectionRange * 2f, config.ChaseVerticalTolerance * 2f, 0f));
             Gizmos.color = Color.red; Gizmos.DrawWireSphere(transform.position, config.AttackRange);
         }
     }

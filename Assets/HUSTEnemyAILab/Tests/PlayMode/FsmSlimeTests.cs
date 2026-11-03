@@ -47,6 +47,10 @@ namespace HUST.EnemyAILab.Tests.PlayMode
         public IEnumerator ExplicitRangeConditions_DriveAllStateTransitions()
         {
             Assert.That(slime.CurrentState, Is.EqualTo(EnemyState.Patrol));
+            player.transform.position = new Vector3(4f, 3f);
+            yield return null;
+            Assert.That(slime.CurrentState, Is.EqualTo(EnemyState.Patrol),
+                "A player on another vertical level must not trigger Chase.");
             player.transform.position = new Vector3(4f, 0f);
             yield return null;
             Assert.That(slime.CurrentState, Is.EqualTo(EnemyState.Chase));

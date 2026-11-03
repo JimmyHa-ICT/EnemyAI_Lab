@@ -15,6 +15,7 @@ namespace HUST.EnemyAILab.Production
         private void Update()
         {
             sensor.Scan();
+            combat.Tick();
             switch (CurrentState)
             {
                 case EnemyState.Patrol:
@@ -27,7 +28,7 @@ namespace HUST.EnemyAILab.Production
                 case EnemyState.Attack:
                     if (!sensor.HasTarget) ChangeState(EnemyState.Patrol);
                     else if (!sensor.IsTargetInAttackRange()) ChangeState(EnemyState.Chase);
-                    else { combat.TryBeginAttack(); combat.Tick(); }
+                    else combat.TryBeginAttack();
                     break;
             }
         }

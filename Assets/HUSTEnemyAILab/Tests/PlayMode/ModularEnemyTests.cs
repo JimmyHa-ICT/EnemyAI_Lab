@@ -69,6 +69,9 @@ namespace HUST.EnemyAILab.Tests.PlayMode
         [UnityTest]
         public IEnumerator Sensor_DetectsAndLosesPlayerUsingLayerMask()
         {
+            player.transform.position = new Vector3(4f, 3f); Physics2D.SyncTransforms(); sensor.Scan();
+            Assert.That(sensor.HasTarget, Is.False,
+                "A player on another vertical level must not be detected for Chase.");
             player.transform.position = new Vector3(4f, 0f); Physics2D.SyncTransforms(); sensor.Scan();
             Assert.That(sensor.CurrentTarget, Is.EqualTo(player.transform));
             player.transform.position = new Vector3(10f, 0f); Physics2D.SyncTransforms(); sensor.Scan();

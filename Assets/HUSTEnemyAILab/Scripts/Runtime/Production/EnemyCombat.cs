@@ -3,14 +3,23 @@ using UnityEngine;
 
 namespace HUST.EnemyAILab.Production
 {
+    public enum AttackValidationMode
+    {
+        Safe,
+        UnsafeTeachingDemo
+    }
+
     public sealed class EnemyCombat : MonoBehaviour
     {
         [SerializeField] private EnemyConfig config;
         [SerializeField] private EnemySensor sensor;
+        [SerializeField, Tooltip("Safe is the production default. UnsafeTeachingDemo intentionally skips range revalidation for Milestone 5 teaching only.")]
+        private AttackValidationMode validationMode = AttackValidationMode.Safe;
         private Transform pendingTarget;
         private float impactTime;
         private float nextAttackTime;
         public bool IsWindingUp { get; private set; }
+        public AttackValidationMode ValidationMode => validationMode;
 
         public bool TryBeginAttack()
         {
@@ -27,12 +36,22 @@ namespace HUST.EnemyAILab.Production
             IsWindingUp = false;
             Transform target = pendingTarget;
             pendingTarget = null;
-            if (target != null && sensor.CurrentTarget == target && sensor.IsInAttackRange(target))
+            bool canDamage = validationMode == AttackValidationMode.UnsafeTeachingDemo
+                ? target != null
+                : target != null && sensor.CurrentTarget == target && sensor.IsInAttackRange(target);
+            if (canDamage)
                 target.GetComponent<IDamageable>()?.TakeDamage(config.Damage);
             nextAttackTime = Time.time + config.AttackCooldown;
         }
 
-        public void CancelAttack() { IsWindingUp = false; pendingTarget = null; }
+        public void CancelAttack()
+        {
+            if (validationMode == AttackValidationMode.UnsafeTeachingDemo) return;
+            IsWindingUp = false;
+            pendingTarget = null;
+        }
+
+        public void SetValidationMode(AttackValidationMode mode) { validationMode = mode; }
         public void Configure(EnemyConfig value, EnemySensor valueSensor) { config = value; sensor = valueSensor; }
     }
 }

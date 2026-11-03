@@ -44,10 +44,12 @@ Milestone 4 preserves that behavior while separating production-oriented respons
 - `EnemyHealth` owns damage/death, while `EnemyConfig` stores shared tuning without runtime state.
 - A minimal **F** key player attack demonstrates hit feedback and enemy death.
 
+Milestone 5 adds `04_BugDemo`, a deterministic comparison of the production-safe attack lifecycle and an explicitly incorrect `UnsafeTeachingDemo` mode. The unsafe mode captures a target at wind-up and deliberately omits range revalidation at impact. `Safe` remains the production prefab and Scene 03 default. See `Assets/HUSTEnemyAILab/Documentation/BugDemo.md` for reproduction steps and root-cause analysis.
+
 ## Open the demo
 
 1. Open the project in Unity `6000.3.17f1`.
-2. Open scenes `00_Foundation` through `03_ModularAI` under `Assets/HUSTEnemyAILab/Scenes`.
+2. Open scenes `00_Foundation` through `04_BugDemo` under `Assets/HUSTEnemyAILab/Scenes`.
 3. Enter Play Mode.
 4. Use **A/D** or **Arrow Keys** to move and **Space** to jump.
 5. In either Enemy AI scene, press **R** to reset the demonstration.

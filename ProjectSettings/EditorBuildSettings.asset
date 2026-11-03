@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HUSTEnemyAILab/Scenes/03_ModularAI.unity
     guid: 21cc567235b77a243b084e0b4a9338df
+  - enabled: 1
+    path: Assets/HUSTEnemyAILab/Scenes/04_BugDemo.unity
+    guid: 3b47b55ab6343c74a8992c6abb41f521
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
