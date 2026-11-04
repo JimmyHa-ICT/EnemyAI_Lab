@@ -1,0 +1,865 @@
+{
+  "generatedAt": "2026-11-03T09:07:25.877Z",
+  "executablePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "count": 27,
+  "results": [
+    {
+      "id": "P1",
+      "stage": "Prototype",
+      "source": "Prototype/PrototypeSlime.cs",
+      "start": 32,
+      "end": 55,
+      "highlights": [
+        40,
+        41,
+        52,
+        53,
+        54
+      ],
+      "purpose": "Complete fixed-step patrol loop.",
+      "concept": "Rigidbody movement, boundary normalization, direction state, sprite orientation.",
+      "extractName": "P1_PrototypeSlime_L032-L055.cs",
+      "imageName": "P1_PrototypeSlime_L032-L055.png",
+      "sourceHash": "d2101e57680c65e2db375c6d3533ca4c217526344487fb67c097c4080b7450de",
+      "excerptHash": "6c61fff2aabca2be9b4a089e6e3012d88af5dd53741877349220e43dd3e127e0",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 24,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "P2",
+      "stage": "Prototype",
+      "source": "Prototype/PrototypeSlime.cs",
+      "start": 40,
+      "end": 54,
+      "highlights": [
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        52,
+        53,
+        54
+      ],
+      "purpose": "Direction reversal at both patrol boundaries.",
+      "concept": "Threshold checks, mutually exclusive reversal, direction-to-velocity mapping.",
+      "extractName": "P2_PrototypeSlime_L040-L054.cs",
+      "imageName": "P2_PrototypeSlime_L040-L054.png",
+      "sourceHash": "d2101e57680c65e2db375c6d3533ca4c217526344487fb67c097c4080b7450de",
+      "excerptHash": "894c621908cafed865abb2cf2c91ee10842b373b8c90cfec86f9159a6612e05a",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 15,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I1",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 6,
+      "end": 6,
+      "highlights": [
+        6
+      ],
+      "purpose": "Introduce the state vocabulary.",
+      "concept": "Enum-based finite state representation.",
+      "extractName": "I1_FsmSlime_L006-L006.cs",
+      "imageName": "I1_FsmSlime_L006-L006.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "c2046584415670755dd2ad5080c475ec8a98006ddd1b39ca554d6a65b053e028",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 1,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I2",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 55,
+      "end": 74,
+      "highlights": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "purpose": "Frame update and physics update dispatch.",
+      "concept": "State dispatch and separation of decision timing from physics movement.",
+      "extractName": "I2_FsmSlime_L055-L074.cs",
+      "imageName": "I2_FsmSlime_L055-L074.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "90f9d1d73b6c9b854a33f420a0fe252ec870e98973b3ae75f30e3dfa1615f842",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 20,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I3",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 76,
+      "end": 90,
+      "highlights": [
+        78,
+        83,
+        84,
+        85,
+        89
+      ],
+      "purpose": "Patrol-to-Chase and Chase-to-Patrol/Attack decisions.",
+      "concept": "Guard conditions and directed FSM transitions.",
+      "extractName": "I3_FsmSlime_L076-L090.cs",
+      "imageName": "I3_FsmSlime_L076-L090.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "4910681d443dc5c57f95c2b8940e629d5de7571e7cc51b42d8cb6955dd9e4886",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 15,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I4",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 92,
+      "end": 122,
+      "highlights": [
+        94,
+        96,
+        100,
+        102,
+        106,
+        108,
+        110,
+        111,
+        112,
+        117,
+        119,
+        120
+      ],
+      "purpose": "Attack exits and timed wind-up, impact, and cooldown.",
+      "concept": "Temporal state within a state, early returns, and attack lifecycle.",
+      "extractName": "I4_FsmSlime_L092-L122.cs",
+      "imageName": "I4_FsmSlime_L092-L122.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "354e28d78eaef2ed3fa185bc99bc78ae33d18be8a341761e614483f84cce6660",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 31,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I4a",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 92,
+      "end": 104,
+      "highlights": [
+        94,
+        96,
+        100,
+        102
+      ],
+      "purpose": "Exit conditions from Attack.",
+      "concept": "Transition priority and guard clauses.",
+      "extractName": "I4a_FsmSlime_L092-L104.cs",
+      "imageName": "I4a_FsmSlime_L092-L104.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "b189d87acd8b4dae5dedcb98d96cf03d127cd68c3c80f26abdc97a92f70e1c11",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 13,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I4b",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 106,
+      "end": 122,
+      "highlights": [
+        106,
+        108,
+        110,
+        111,
+        112,
+        117,
+        119,
+        120
+      ],
+      "purpose": "Attack wind-up, impact, and cooldown.",
+      "concept": "Time-driven lifecycle and deferred effects.",
+      "extractName": "I4b_FsmSlime_L106-L122.cs",
+      "imageName": "I4b_FsmSlime_L106-L122.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "14aa18b8d4324ba647624ced331365526a3f971077327aed5bb0a29b4a647262",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 17,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I5",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 124,
+      "end": 131,
+      "highlights": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "purpose": "Centralized transition side effects.",
+      "concept": "Transition gateway, cancellation, entry action, and presentation feedback.",
+      "extractName": "I5_FsmSlime_L124-L131.cs",
+      "imageName": "I5_FsmSlime_L124-L131.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "ae19a94563d677ff0b131735cf13a20de1027b239682a6c2f9010cb295c6ca2d",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 8,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I6",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 133,
+      "end": 146,
+      "highlights": [
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "purpose": "Patrol behavior inside the FSM version.",
+      "concept": "Reusable movement behavior under state control.",
+      "extractName": "I6_FsmSlime_L133-L146.cs",
+      "imageName": "I6_FsmSlime_L133-L146.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "4e7a91cf2d73ffcd273d5a17fe5d82e1740a2f8cab217df05e60b12539bff0e9",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 14,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I7",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 148,
+      "end": 167,
+      "highlights": [
+        150,
+        152,
+        155,
+        160,
+        161,
+        166
+      ],
+      "purpose": "Chase movement and shared movement helpers.",
+      "concept": "Target steering, helper extraction, and defensive stopping.",
+      "extractName": "I7_FsmSlime_L148-L167.cs",
+      "imageName": "I7_FsmSlime_L148-L167.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "4d821f0cbc62f40592527c608a00a6baedf6f9bf0be939c60bc6b153e2f0acc0",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 20,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "I8",
+      "stage": "Intermediate",
+      "source": "Intermediate/FsmSlime.cs",
+      "start": 169,
+      "end": 180,
+      "highlights": [
+        169,
+        170,
+        171,
+        173,
+        174,
+        178,
+        179
+      ],
+      "purpose": "Detection, attack-range checks, and damage application.",
+      "concept": "Boolean queries, spatial tests, and interface-based damage.",
+      "extractName": "I8_FsmSlime_L169-L180.cs",
+      "imageName": "I8_FsmSlime_L169-L180.png",
+      "sourceHash": "5a62349c315cbecc08dbe91ec7f51ab2e3e33d9de70cdbb8ea7cad4d11386740",
+      "excerptHash": "a8b46416d4fe99275dab663c6355b7f9c855f869c1a0d3d874e6ef5ede73d95d",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 12,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R1",
+      "stage": "Production",
+      "source": "Production/EnemyBrain.cs",
+      "start": 6,
+      "end": 12,
+      "highlights": [
+        8,
+        9,
+        10,
+        12
+      ],
+      "purpose": "Introduce the production coordinator and collaborators.",
+      "concept": "Composition and orchestration.",
+      "extractName": "R1_EnemyBrain_L006-L012.cs",
+      "imageName": "R1_EnemyBrain_L006-L012.png",
+      "sourceHash": "91d84868926aadebd16de22b22d768f12ee79a2dc90a385f18c1d83244584159",
+      "excerptHash": "d4954edfe657b1053bbbc2409f3ded96f495252aea0cc010ad6dd89eaab6a22d",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 7,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R2",
+      "stage": "Production",
+      "source": "Production/EnemyBrain.cs",
+      "start": 15,
+      "end": 41,
+      "highlights": [
+        17,
+        18,
+        19,
+        22,
+        25,
+        26,
+        29,
+        30,
+        31,
+        38,
+        39,
+        40
+      ],
+      "purpose": "Brain coordination across sensing, combat, decisions, and movement.",
+      "concept": "Thin coordinator, state dispatch, and Update/FixedUpdate responsibility split.",
+      "extractName": "R2_EnemyBrain_L015-L041.cs",
+      "imageName": "R2_EnemyBrain_L015-L041.png",
+      "sourceHash": "91d84868926aadebd16de22b22d768f12ee79a2dc90a385f18c1d83244584159",
+      "excerptHash": "20f82c825884ed6aad9eed0b7ff2917cc148861100cb5a8afa7cc58bf21d4889",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 27,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R2a",
+      "stage": "Production",
+      "source": "Production/EnemyBrain.cs",
+      "start": 15,
+      "end": 34,
+      "highlights": [
+        17,
+        18,
+        19,
+        22,
+        25,
+        26,
+        29,
+        30,
+        31
+      ],
+      "purpose": "Sensing/combat ticks and state decisions.",
+      "concept": "Orchestration and collaborator delegation.",
+      "extractName": "R2a_EnemyBrain_L015-L034.cs",
+      "imageName": "R2a_EnemyBrain_L015-L034.png",
+      "sourceHash": "91d84868926aadebd16de22b22d768f12ee79a2dc90a385f18c1d83244584159",
+      "excerptHash": "780dfb10cdbbd05975bd6af7c9c0248fba19f8086c5a7d4145e195a7d3c4fe7a",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 20,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R2b",
+      "stage": "Production",
+      "source": "Production/EnemyBrain.cs",
+      "start": 36,
+      "end": 41,
+      "highlights": [
+        38,
+        39,
+        40
+      ],
+      "purpose": "State-to-movement dispatch.",
+      "concept": "Physics-loop delegation.",
+      "extractName": "R2b_EnemyBrain_L036-L041.cs",
+      "imageName": "R2b_EnemyBrain_L036-L041.png",
+      "sourceHash": "91d84868926aadebd16de22b22d768f12ee79a2dc90a385f18c1d83244584159",
+      "excerptHash": "47454f2b50ddeaede6c285934725ce059f871d1914bc970f5fff80e3b4712d2a",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 6,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R3",
+      "stage": "Production",
+      "source": "Production/EnemyBrain.cs",
+      "start": 43,
+      "end": 50,
+      "highlights": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "purpose": "Transition cleanup and entry behavior.",
+      "concept": "Centralized transition side effects and attack cancellation.",
+      "extractName": "R3_EnemyBrain_L043-L050.cs",
+      "imageName": "R3_EnemyBrain_L043-L050.png",
+      "sourceHash": "91d84868926aadebd16de22b22d768f12ee79a2dc90a385f18c1d83244584159",
+      "excerptHash": "39c578ef7f48378cdbe88b1d6bc806e58e32e6839e3dfed0a2302f259172dba8",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 8,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R4",
+      "stage": "Production",
+      "source": "Production/EnemySensor.cs",
+      "start": 5,
+      "end": 23,
+      "highlights": [
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23
+      ],
+      "purpose": "Sensor ownership of target acquisition and range queries.",
+      "concept": "Single responsibility, physics query, and encapsulated perception API.",
+      "extractName": "R4_EnemySensor_L005-L023.cs",
+      "imageName": "R4_EnemySensor_L005-L023.png",
+      "sourceHash": "144e8859711640656805f4bfbf0ca0480f61dad1eab839df12136a8fc5ffa2f7",
+      "excerptHash": "07d50c0a3dadd6f52b5645f8065d60ad63a222c3aeec01262be4b32be38cb7aa",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 19,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R5",
+      "stage": "Production",
+      "source": "Production/EnemyMovement.cs",
+      "start": 18,
+      "end": 39,
+      "highlights": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        30,
+        31,
+        34,
+        37,
+        38
+      ],
+      "purpose": "Movement ownership for patrol, chase, stop, and facing.",
+      "concept": "Single responsibility, target steering, and a shared movement primitive.",
+      "extractName": "R5_EnemyMovement_L018-L039.cs",
+      "imageName": "R5_EnemyMovement_L018-L039.png",
+      "sourceHash": "c0869629ce586f0afa68e770f8f8a3412676b7aa6acba15fc42d0d6fbed3d169",
+      "excerptHash": "f4fe56d17eb3e3dd11d3e270cc6a6c2764c214c3204aadff3318c6fa096f536f",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 22,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R6",
+      "stage": "Production",
+      "source": "Production/EnemyCombat.cs",
+      "start": 6,
+      "end": 10,
+      "highlights": [
+        6,
+        8,
+        9
+      ],
+      "purpose": "Introduce safe versus intentionally unsafe validation modes.",
+      "concept": "Explicit policy selection for a teaching experiment.",
+      "extractName": "R6_EnemyCombat_L006-L010.cs",
+      "imageName": "R6_EnemyCombat_L006-L010.png",
+      "sourceHash": "22859627bad8957181ce5af283c4ff14348b1dcfd2f6e3561b9c1a5746ab0da8",
+      "excerptHash": "1766edccf6ae1b18f776d3dd7445598719dc52e4f738e9710d9b0e3f630f9c1e",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 5,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R7",
+      "stage": "Production",
+      "source": "Production/EnemyCombat.cs",
+      "start": 24,
+      "end": 31,
+      "highlights": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "purpose": "Attack admission and wind-up setup.",
+      "concept": "Preconditions, target snapshot, and deferred impact.",
+      "extractName": "R7_EnemyCombat_L024-L031.cs",
+      "imageName": "R7_EnemyCombat_L024-L031.png",
+      "sourceHash": "22859627bad8957181ce5af283c4ff14348b1dcfd2f6e3561b9c1a5746ab0da8",
+      "excerptHash": "bdd78554004228b2f4a33d4a871ea7aca6d8e91605797b31d2f8cbe024cc7acd",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 8,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R8",
+      "stage": "Production",
+      "source": "Production/EnemyCombat.cs",
+      "start": 33,
+      "end": 45,
+      "highlights": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "purpose": "Impact-time revalidation, damage, and cooldown.",
+      "concept": "Attack lifecycle, stale-target defense, and interface-based damage.",
+      "extractName": "R8_EnemyCombat_L033-L045.cs",
+      "imageName": "R8_EnemyCombat_L033-L045.png",
+      "sourceHash": "22859627bad8957181ce5af283c4ff14348b1dcfd2f6e3561b9c1a5746ab0da8",
+      "excerptHash": "417c069baf22f7bd722266e6766dd1daff762ad848cea2f634604b598c0437c1",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 13,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R9",
+      "stage": "Production",
+      "source": "Production/EnemyCombat.cs",
+      "start": 47,
+      "end": 52,
+      "highlights": [
+        49,
+        50,
+        51
+      ],
+      "purpose": "Safe attack cancellation.",
+      "concept": "Lifecycle cleanup and policy-dependent behavior.",
+      "extractName": "R9_EnemyCombat_L047-L052.cs",
+      "imageName": "R9_EnemyCombat_L047-L052.png",
+      "sourceHash": "22859627bad8957181ce5af283c4ff14348b1dcfd2f6e3561b9c1a5746ab0da8",
+      "excerptHash": "1611e5279681f9b52795a76ee80b2f9f0ee81acbf99c658257e734834a3d1409",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 6,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R10",
+      "stage": "Production",
+      "source": "Production/EnemyHealth.cs",
+      "start": 8,
+      "end": 27,
+      "highlights": [
+        15,
+        16,
+        17,
+        20,
+        22,
+        24,
+        25,
+        26
+      ],
+      "purpose": "Health state, damage handling, and death dispatch.",
+      "concept": "Interface implementation, invariant clamping, and event-driven lifecycle.",
+      "extractName": "R10_EnemyHealth_L008-L027.cs",
+      "imageName": "R10_EnemyHealth_L008-L027.png",
+      "sourceHash": "da6dcabab56eebc79d96641dc12102ad56cd2180fbebd3f9da7cdbc2204c6249",
+      "excerptHash": "c7fc25d52db014737bc8108868a8b58d0e84ba10d62d6d4e072d86f373bb915b",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 20,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R11",
+      "stage": "Production",
+      "source": "Production/EnemyHealth.cs",
+      "start": 37,
+      "end": 44,
+      "highlights": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "purpose": "Death side effects.",
+      "concept": "Idempotence, component shutdown, and event notification.",
+      "extractName": "R11_EnemyHealth_L037-L044.cs",
+      "imageName": "R11_EnemyHealth_L037-L044.png",
+      "sourceHash": "da6dcabab56eebc79d96641dc12102ad56cd2180fbebd3f9da7cdbc2204c6249",
+      "excerptHash": "654845d56d4fe9d17be178099d6b69b9481c8b3e244cb135944c2a09762491cb",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 8,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R12",
+      "stage": "Production",
+      "source": "Production/EnemyConfig.cs",
+      "start": 5,
+      "end": 16,
+      "highlights": [
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "purpose": "ScriptableObject and serialized tuning surface.",
+      "concept": "Data-driven configuration, reusable assets, and constrained inspector values.",
+      "extractName": "R12_EnemyConfig_L005-L016.cs",
+      "imageName": "R12_EnemyConfig_L005-L016.png",
+      "sourceHash": "f1ecfaea03849015aa00d85ed67dbf123b144cbacf496672f71e98c07d1e4060",
+      "excerptHash": "9629cf174b42303cf63d9d86265a4496fd5711fd7d9baccc427a2055d3ad60c1",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 12,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "id": "R13",
+      "stage": "Production",
+      "source": "Production/EnemyConfig.cs",
+      "start": 18,
+      "end": 30,
+      "highlights": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "purpose": "Validated runtime/test configuration.",
+      "concept": "Boundary validation and configuration invariants.",
+      "extractName": "R13_EnemyConfig_L018-L030.cs",
+      "imageName": "R13_EnemyConfig_L018-L030.png",
+      "sourceHash": "f1ecfaea03849015aa00d85ed67dbf123b144cbacf496672f71e98c07d1e4060",
+      "excerptHash": "75c322a988711c10de1f5e39270429ded237279d9ec98dc9241d827004ee15f3",
+      "byteExact": true,
+      "domValidation": {
+        "rowCount": 13,
+        "textMatches": true,
+        "clipped": false
+      },
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      }
+    }
+  ]
+}
